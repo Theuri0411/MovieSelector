@@ -12,15 +12,18 @@ def main():
 
     soup = BeautifulSoup(html, 'html.parser')
     movietags = soup.select ("td.titleColumn")
-    movietag0 = movietags[0]
+    inner_movietags = soup.select('td.titleColumn a')
+   
+    
     def get_year (movie_tag):
         moviesplit = movie_tag.text.split()
         year = moviesplit[-1]
         return year
     years = [get_year(tag) for tag in movietags]
 
-
+    inner_movietag0 = inner_movietags[0]
     print (movietag0)
+    # title = tag['title']
     
     
     
