@@ -28,22 +28,16 @@ def main():
 
 
     n_movies = len(titles)
+    print (n_movies)
 
-    while trye
+    while (True):
+        idx = random.randrange(0, n_movies)
+        print(f'{titles[idx]} {years[idx]}, rating: {ratings[idx]:.1f}, starring: {actors_list[idx]}')
 
 
-    # inner_movietag0 = innermovietags[0]
-    # print (inner_movietag0)
-    # actors = inner_movietag0['title']
-    # title = inner_movietag0.text
-    # print (actors)
-    # print(title)
-    ratin0 = rating_tags[0]
-    print(ratin0 ['data-value'])
-    
-    
-    
-    
+        user_input = input('Do You Want Another Movie (y/[n])? ')
+        if user_input != 'y':
+            break
+
 if __name__ == '__main__':
     main()
-    
